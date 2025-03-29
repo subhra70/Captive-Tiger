@@ -1,0 +1,450 @@
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.board {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.col {
+  width: 25%;
+  height: 100px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.col:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Connecting Lines */
+.line {
+  position: absolute;
+  background: white;
+}
+
+/* Diagonal 1 (Top-left to Bottom-right) */
+.line-diagonal1 {
+  width: 2px;
+  height: 561px;
+  background: white;
+  transform: rotate(45deg);
+  top: -82px;
+  left: 50%;
+}
+
+/* Diagonal 2 (Top-right to Bottom-left) */
+.line-diagonal2 {
+  width: 2px;
+  height: 561px;
+  background: white;
+  transform: rotate(-45deg);
+  top: -80px;
+  left: 50%;
+}
+
+/* Line from 3rd point of 1st row to 1st point of 3rd row */
+.line1 {
+  position: absolute;
+  top: 99px;
+  left: 40%;
+  width: 280px;
+  height: 2px;
+  border-left: 2px solid white;
+  transform: rotate(45deg);
+}
+
+/* Line from 3rd point of 1st row to last point of 3rd row */
+.line2 {
+  position: absolute;
+  top: 99px;
+  left: -10%;
+  width: 280px;
+  height: 2px;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+/* Line from 1st & last points of 3rd row to 3rd point of last row */
+.line3 {
+  position: absolute;
+  bottom: 97px;
+  left: -10%;
+  width: 280px;
+  height: 2px;
+  border-left: 2px solid white;
+  transform: rotate(45deg);
+}
+
+.line4 {
+  position: absolute;
+  bottom: 98px;
+  left: 40%;
+  width: 280px;
+  height: 2px;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+/* 3D positions */
+.position {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Indivdual position of slot */
+.position0 {
+  top: -4px;
+  left: -4px;
+}
+.position1 {
+  top: -4px;
+  left: 94px;
+}
+.position2 {
+  top: -4px;
+  left: 194px;
+}
+.position3 {
+  top: -4px;
+  left: 294px;
+}
+.position4 {
+  top: -4px;
+  left: 394px;
+}
+.position5 {
+  top: 94px;
+  left: -4px;
+}
+.position6 {
+  top: 94px;
+  left: 94px;
+}
+.position7 {
+  top: 94px;
+  left: 194px;
+}
+.position8 {
+  top: 94px;
+  left: 294px;
+}
+.position9 {
+  top: 94px;
+  left: 394px;
+}
+.position10 {
+  top: 194px;
+  left: -4px;
+}
+.position11 {
+  top: 194px;
+  left: 94px;
+}
+.position12 {
+  top: 194px;
+  left: 194px;
+}
+.position13 {
+  top: 194px;
+  left: 294px;
+}
+.position14 {
+  top: 194px;
+  left: 394px;
+}
+.position15 {
+  top: 294px;
+  left: -4px;
+}
+.position16 {
+  top: 294px;
+  left: 94px;
+}
+.position17 {
+  top: 294px;
+  left: 194px;
+}
+.position18 {
+  top: 294px;
+  left: 294px;
+}
+.position19 {
+  top: 294px;
+  left: 394px;
+}
+.position20 {
+  top: 394px;
+  left: -4px;
+}
+.position21 {
+  top: 394px;
+  left: 94px;
+}
+.position22 {
+  top: 394px;
+  left: 194px;
+}
+.position23 {
+  top: 394px;
+  left: 294px;
+}
+.position24 {
+  top: 394px;
+  left: 394px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.small {
+  height: 20px;
+  width: 20px;
+  color: black;
+  background: radial-gradient(
+    circle,
+    rgb(13, 52, 111) 30%,
+    rgb(37, 51, 143) 70%
+  );
+  z-index: 300;
+}
+/* Individual dear position */
+.dear1 {
+  top: 90px;
+  left: 90px;
+}
+.dear2 {
+  top: 105px;
+  left: 90px;
+}
+.dear3 {
+  top: 75px;
+  left: 90px;
+}
+.dear4 {
+  top: 90px;
+  left: 75px;
+}
+.dear5 {
+  top: 90px;
+  left: 105px;
+}
+.dear6 {
+  top: 90px;
+  left: 290px;
+}
+.dear7 {
+  top: 105px;
+  left: 290px;
+}
+.dear8 {
+  top: 75px;
+  left: 290px;
+}
+.dear9 {
+  top: 90px;
+  left: 275px;
+}
+.dear10 {
+  top: 90px;
+  left: 305px;
+}
+.dear11 {
+  top: 290px;
+  left: 90px;
+}
+.dear12 {
+  top: 290px;
+  left: 105px;
+}
+.dear13 {
+  top: 290px;
+  left: 75px;
+}
+.dear14 {
+  top: 275px;
+  left: 90px;
+}
+.dear15 {
+  top: 305px;
+  left: 90px;
+}
+.dear16 {
+  top: 290px;
+  left: 290px;
+}
+.dear17 {
+  top: 275px;
+  left: 290px;
+}
+.dear18 {
+  top: 305px;
+  left: 290px;
+}
+.dear19 {
+  top: 290px;
+  left: 275px;
+}
+.dear20 {
+  top: 290px;
+  left: 305px;
+}
+
+/* Bigger 3D positions */
+.big {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(
+    circle,
+    rgb(215, 33, 33) 30%,
+    rgb(225, 42, 42) 70%
+  );
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+/* Individual Tiger position */
+.big1 {
+  top: 185px;
+  left: -15px;
+}
+.big2 {
+  top: 185px;
+  left: 385px;
+}
+
+.headPart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+i{
+  font-size: 24px;
+  color: white;
+  text-decoration: underline;
+}
+.container .details {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 15px;
+}
+.details div {
+  width: 90%;
+  max-width: 100px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.details button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: transparent;
+}
+button:hover {
+  background-color: white;
+}
+
+.details .player2 {
+  border: 1px solid orangered;
+}
+
+.details .player1 {
+  border: 1px solid rgb(41, 41, 201);
+}
+
+.announce {
+  margin-top: 5px;
+  text-align: center;
+  color: black;
+  width: 100%;
+  max-width: 500px;
+  font-size: 24px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.ruleBox{
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: space-between;
+  color: wheat;
+}
+.ruleBox div{
+  margin: 10px 0;
+  font-size: 18px;
+}
+.ruleBox button{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: transparent;
+}
+.ruleBox button:hover{
+  background-color: white;
+}
+@media (max-width: 375px) {
+  h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .board{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+}

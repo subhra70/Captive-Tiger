@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Captive Tiger</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="headPart">
+          <h2>Captive the Tiger</h2>
+          <a href="rules.html"><b><i>See Rules</i></b></a>
+        </div>
+        <div class="board">
+          <div class="row">
+            <div class="col" id="p1"></div>
+            <div class="col"></div>
+            <div class="col" id="p3"></div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col" id="p5"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="p6"></div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col" id="p7"></div>
+            <div class="col"></div>
+          </div>
+
+          <!-- Connecting Lines -->
+          <div class="line line-diagonal1"></div>
+          <div class="line line-diagonal2"></div>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <div class="line line4"></div>
+
+          <!-- positions inside the board -->
+          <div class="position position0" index="0"></div>
+          <div class="position position1" index="1"></div>
+          <div class="position position2" index="2"></div>
+          <div class="position position3" index="3"></div>
+          <div class="position position4" index="4"></div>
+          <div class="position position5" index="5"></div>
+          <div class="position position6" index="6"></div>
+          <div class="position position7" index="7"></div>
+          <div class="position position8" index="8"></div>
+          <div class="position position9" index="9"></div>
+          <div class="position position10" index="10"></div>
+          <div class="position position11" index="11"></div>
+          <div class="position position12" index="12"></div>
+          <div class="position position13" index="13"></div>
+          <div class="position position14" index="14"></div>
+          <div class="position position15" index="15"></div>
+          <div class="position position16" index="16"></div>
+          <div class="position position17" index="17"></div>
+          <div class="position position18" index="18"></div>
+          <div class="position position19" index="19"></div>
+          <div class="position position20" index="20"></div>
+          <div class="position position21" index="21"></div>
+          <div class="position position22" index="22"></div>
+          <div class="position position23" index="23"></div>
+          <div class="position position24" index="24"></div>
+
+          <!-- Small circles-->
+          <div class="circle small dear1" dear-no="0">0</div>
+          <div class="circle small dear2" dear-no="1">1</div>
+          <div class="circle small dear3" dear-no="2">2</div>
+          <div class="circle small dear4" dear-no="3">3</div>
+          <div class="circle small dear5" dear-no="4">4</div>
+
+          <div class="circle small dear6" dear-no="5">5</div>
+          <div class="circle small dear7" dear-no="6">6</div>
+          <div class="circle small dear8" dear-no="7">7</div>
+          <div class="circle small dear9" dear-no="8">8</div>
+          <div class="circle small dear10" dear-no="9">9</div>
+
+          <div class="circle small dear11" dear-no="10">10</div>
+          <div class="circle small dear12" dear-no="11">11</div>
+          <div class="circle small dear13" dear-no="12">12</div>
+          <div class="circle small dear14" dear-no="13">13</div>
+          <div class="circle small dear15" dear-no="14">14</div>
+
+          <div class="circle small dear16" dear-no="15">15</div>
+          <div class="circle small dear17" dear-no="16">16</div>
+          <div class="circle small dear18" dear-no="17">17</div>
+          <div class="circle small dear19" dear-no="18">18</div>
+          <div class="circle small dear20" dear-no="19">19</div>
+
+          <!-- Bigger 3D positions at 1st and last points of 3rd row -->
+          <div
+            class="circle big big1"
+            tiger-no="0"
+          ></div>
+          <div
+            class="circle big big2"
+            tiger-no="1"
+          ></div>
+        </div>
+        <div class="details">
+          <div class="player player1">Player1</div>
+          <div class="player player2">Player2</div>
+          <button class="start">Start</button>
+          <button type="reset" class="restart">Restart</button>
+        </div>
+        <div class="announce">Game Result</div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
