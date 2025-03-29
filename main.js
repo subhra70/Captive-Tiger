@@ -81,72 +81,6 @@ posList.forEach((pos) => {
   pos.addEventListener("click", posHandling);
 });
 
-document.querySelector(".restart").addEventListener("click", () => {
-  let posClick = false;
-  let dearClick = false;
-  let tigerClick = false;
-  let turn = -1; //No one played his/her turn
-  let dearNo = -1;
-  let tigerNo = -1;
-  let begin = 0;
-  let dearCount = 20;
-
-  let flag1 = 0;
-  let flag2 = 0;
-  globalThis.tigerElement = null;
-  globalThis.dearElement = null;
-  globalThis.posNo = -1;
-  let movePosition = [
-    [0, 0, 0],
-    [0, 1, 0],
-    [0, 2, 0],
-    [0, 3, 0],
-    [0, 4, 0],
-    [1, 0, 0],
-    [1, 1, 5],
-    [1, 2, 0],
-    [1, 3, 5],
-    [1, 4, 0],
-    [2, 0, 1],
-    [2, 1, 0],
-    [2, 2, 0],
-    [2, 3, 0],
-    [2, 4, 1],
-    [3, 0, 0],
-    [3, 1, 5],
-    [3, 2, 0],
-    [3, 3, 5],
-    [3, 4, 0],
-    [4, 0, 0],
-    [4, 1, 0],
-    [4, 2, 0],
-    [4, 3, 0],
-    [4, 4, 0],
-  ];
-  let dearPosList = [
-    6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 16, 16, 16, 16, 16, 18, 18, 18, 18, 18,
-  ]; // This array keeps track of all the dears
-  let tigerPosList = [10, 14];
-
-  const dearTopPosList = [
-    -10, -10, -10, -10, -10, 90, 90, 90, 90, 90, 190, 190, 190, 190, 190, 290,
-    290, 290, 290, 290, 390, 390, 390, 390, 390,
-  ]; // This array keeps track of the top distance in pixel of dears
-  const dearLeftPosList = [
-    -10, 90, 190, 290, 390, -10, 90, 190, 290, 390, -10, 90, 190, 290, 390, -10,
-    90, 190, 290, 390, -10, 90, 190, 290, 390,
-  ]; // This array keeps track of the left distance in pixel of dears
-
-  const tigerTopPosList = [
-    -15, -15, -15, -15, -15, 85, 85, 85, 85, 85, 185, 185, 185, 185, 185, 285,
-    285, 285, 285, 285, 385, 385, 385, 385, 385,
-  ]; // This array keeps track of the top distance in pixel of tigers
-  const tigerLeftPosList = [
-    -15, 85, 185, 285, 385, -15, 85, 185, 285, 385, -15, 85, 185, 285, 385, -15,
-    85, 185, 285, 385, -15, 85, 185, 285, 385,
-  ]; // This array keeps track of the left distance in pixel of tigers
-});
-
 // Handling the movement of dears
 function dearMoveHandling(event) {
   dearClick = true;
@@ -222,13 +156,17 @@ function posHandling(event) {
               movePosition[posNo][1] &&
               movePosition[dearPosList[dearNo]][0] - 1 ===
                 movePosition[posNo][0]))) ||
-        (movePosition[dearPosList[dearNo]][0] - 1 === movePosition[posNo][0] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[dearPosList[dearNo]][0] - 1 === movePosition[posNo][0] &&
           movePosition[dearPosList[dearNo]][1] === movePosition[posNo][1]) ||
-        (movePosition[dearPosList[dearNo]][1] - 1 === movePosition[posNo][1] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[dearPosList[dearNo]][1] - 1 === movePosition[posNo][1] &&
           movePosition[dearPosList[dearNo]][0] === movePosition[posNo][0]) ||
-        (movePosition[dearPosList[dearNo]][0] + 1 === movePosition[posNo][0] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[dearPosList[dearNo]][0] + 1 === movePosition[posNo][0] &&
           movePosition[dearPosList[dearNo]][1] === movePosition[posNo][1]) ||
-        (movePosition[dearPosList[dearNo]][1] + 1 === movePosition[posNo][1] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[dearPosList[dearNo]][1] + 1 === movePosition[posNo][1] &&
           movePosition[dearPosList[dearNo]][0] === movePosition[posNo][0])
       ) {
         movePosition[dearPosList[dearNo]][2] -= 1;
@@ -306,17 +244,21 @@ function posHandling(event) {
               movePosition[posNo][1] &&
               movePosition[tigerPosList[tigerNo]][0] - 1 ===
                 movePosition[posNo][0]))) ||
-        (movePosition[tigerPosList[tigerNo]][0] - 1 ===
-          movePosition[posNo][0] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[tigerPosList[tigerNo]][0] - 1 ===
+            movePosition[posNo][0] &&
           movePosition[tigerPosList[tigerNo]][1] === movePosition[posNo][1]) ||
-        (movePosition[tigerPosList[tigerNo]][1] - 1 ===
-          movePosition[posNo][1] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[tigerPosList[tigerNo]][1] - 1 ===
+            movePosition[posNo][1] &&
           movePosition[tigerPosList[tigerNo]][0] === movePosition[posNo][0]) ||
-        (movePosition[tigerPosList[tigerNo]][0] + 1 ===
-          movePosition[posNo][0] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[tigerPosList[tigerNo]][0] + 1 ===
+            movePosition[posNo][0] &&
           movePosition[tigerPosList[tigerNo]][1] === movePosition[posNo][1]) ||
-        (movePosition[tigerPosList[tigerNo]][1] + 1 ===
-          movePosition[posNo][1] &&
+        (movePosition[posNo][2] === 0 &&
+          movePosition[tigerPosList[tigerNo]][1] + 1 ===
+            movePosition[posNo][1] &&
           movePosition[tigerPosList[tigerNo]][0] === movePosition[posNo][0])
       ) {
         movePosition[tigerPosList[tigerNo]][2] -= 1;

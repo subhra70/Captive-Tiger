@@ -8,7 +8,7 @@
 body {
   font-family: "Trebuchet MS", sans-serif;
   background: linear-gradient(to right, #2c3e50, #4ca1af);
-  height: 100vh;
+  height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
