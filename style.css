@@ -17,6 +17,7 @@ body {
 .container {
   text-align: center;
   color: white;
+  padding: 15px;
 }
 
 h2 {
@@ -136,7 +137,8 @@ h2 {
   border-radius: 50%;
   cursor: pointer;
 }
-/* Indivdual position of slot */
+
+/* Individual position of slot */
 .position0 {
   top: -4px;
   left: -4px;
@@ -243,6 +245,7 @@ h2 {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .small {
   height: 20px;
   width: 20px;
@@ -254,6 +257,7 @@ h2 {
   );
   z-index: 300;
 }
+
 /* Individual dear position */
 .dear1 {
   top: 90px;
@@ -348,6 +352,7 @@ h2 {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
 /* Individual Tiger position */
 .big1 {
   top: 185px;
@@ -355,25 +360,43 @@ h2 {
 }
 .big2 {
   top: 185px;
+  left: 85px;
+  display: none;
+}
+.big3 {
+  top: 185px;
+  left: 185px;
+  display: none;
+}
+.big4 {
+  top: 185px;
+  left: 285px;
+  display: none;
+}
+.big5 {
+  top: 185px;
   left: 385px;
 }
 
-.headPart{
+.headPart {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-i{
+
+i {
   font-size: 24px;
   color: white;
   text-decoration: underline;
 }
+
 .container .details {
   display: flex;
   justify-content: space-between;
   gap: 5px;
   margin-top: 15px;
 }
+
 .details div {
   width: 90%;
   max-width: 100px;
@@ -381,12 +404,14 @@ i{
   border: 1px solid white;
   border-radius: 10px;
 }
+
 .details button {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid white;
   background: transparent;
 }
+
 button:hover {
   background-color: white;
 }
@@ -410,41 +435,584 @@ button:hover {
   border: 1px solid white;
   border-radius: 10px;
 }
-.ruleBox{
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  border: 1px solid white;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  justify-content: space-between;
-  color: wheat;
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  i {
+    font-size: 18px;
+  }
+
+  .details div {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .details button {
+    padding: 8px 12px;
+  }
 }
-.ruleBox div{
-  margin: 10px 0;
-  font-size: 18px;
+
+@media (max-width: 480px) {
+  .board {
+    width: 340px;
+    height: 340px;
+  }
+
+  .col {
+    height: 85px;
+  }
+
+  /* Diagonal 1 (Top-left to Bottom-right) */
+  .line-diagonal1 {
+    width: 2px;
+    height: 478px;
+    background: white;
+    transform: rotate(45deg);
+    top: -68px;
+    left: 49%;
+  }
+
+  /* Diagonal 2 (Top-right to Bottom-left) */
+  .line-diagonal2 {
+    width: 2px;
+    height: 478px;
+    background: white;
+    transform: rotate(-45deg);
+    top: -72px;
+    left: 49%;
+  }
+
+  /* Line from 3rd point of 1st row to 1st point of 3rd row */
+  .line1 {
+    position: absolute;
+    top: 82px;
+    left: 39%;
+    width: 240px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(45deg);
+  }
+
+  /* Line from 3rd point of 1st row to last point of 3rd row */
+  .line2 {
+    position: absolute;
+    top: 82px;
+    left: -10%;
+    width: 240px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+  }
+
+  /* Line from 1st & last points of 3rd row to 3rd point of last row */
+  .line3 {
+    position: absolute;
+    bottom: 82px;
+    left: -10%;
+    width: 240px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(45deg);
+  }
+
+  .line4 {
+    position: absolute;
+    bottom: 82px;
+    left: 39%;
+    width: 240px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+  }
+
+  .position {
+    width: 8px;
+    height: 8px;
+  }
+
+  .position1 {
+    left: 81px;
+  }
+  .position2 {
+    left: 165.5px;
+  }
+  .position3 {
+    left: 249.5px;
+  }
+  .position4 {
+    left: 333.5px;
+  }
+  .position5 {
+    top: 81px;
+  }
+  .position6 {
+    top: 81px;
+    left: 81px;
+  }
+  .position7 {
+    top: 81px;
+    left: 165.5px;
+  }
+  .position8 {
+    top: 81px;
+    left: 249.5px;
+  }
+  .position9 {
+    top: 81px;
+    left: 333.5px;
+  }
+  .position10 {
+    top: 165.5px;
+  }
+  .position11 {
+    top: 165.5px;
+    left: 81px;
+  }
+  .position12 {
+    top: 165.5px;
+    left: 165.5px;
+  }
+  .position13 {
+    top: 165.5px;
+    left: 249.5px;
+  }
+  .position14 {
+    top: 165.5px;
+    left: 333.5px;
+  }
+  .position15 {
+    top: 250.5px;
+  }
+  .position16 {
+    top: 250.5px;
+    left: 81px;
+  }
+  .position17 {
+    top: 250.5px;
+    left: 165.5px;
+  }
+  .position18 {
+    top: 250.5px;
+    left: 249.5px;
+  }
+  .position19 {
+    top: 250.5px;
+    left: 333.5px;
+  }
+  .position20 {
+    top: 334px;
+  }
+  .position21 {
+    top: 334px;
+    left: 81px;
+  }
+  .position22 {
+    top: 334px;
+    left: 165.5px;
+  }
+  .position23 {
+    top: 334px;
+    left: 249.5px;
+  }
+  .position24 {
+    top: 334px;
+    left: 333.5px;
+  }
+
+  .dear1 {
+    top: 75px;
+    left: 75px;
+  }
+  .dear2 {
+    top: 90px;
+    left: 75px;
+  }
+  .dear3 {
+    top: 60px;
+    left: 75px;
+  }
+  .dear4 {
+    top: 75px;
+    left: 90px;
+  }
+  .dear5 {
+    top: 75px;
+    left: 60px;
+  }
+
+  .dear6 {
+    top: 75px;
+    left: 245px;
+  }
+  .dear7 {
+    top: 90px;
+    left: 245px;
+  }
+  .dear8 {
+    top: 60px;
+    left: 245px;
+  }
+  .dear9 {
+    top: 75px;
+    left: 260px;
+  }
+  .dear10 {
+    top: 75px;
+    left: 230px;
+  }
+
+  .dear11 {
+    top: 245px;
+    left: 75px;
+  }
+  .dear12 {
+    top: 260px;
+    left: 75px;
+  }
+  .dear13 {
+    top: 230px;
+    left: 75px;
+  }
+  .dear14 {
+    top: 245px;
+    left: 90px;
+  }
+  .dear15 {
+    top: 245px;
+    left: 60px;
+  }
+
+  .dear16 {
+    top: 245px;
+    left: 245px;
+  }
+  .dear17 {
+    top: 260px;
+    left: 245px;
+  }
+  .dear18 {
+    top: 230px;
+    left: 245px;
+  }
+  .dear19 {
+    top: 245px;
+    left: 260px;
+  }
+  .dear20 {
+    top: 245px;
+    left: 230px;
+  }
+
+  .big {
+    width: 25px;
+    height: 25px;
+  }
+
+  .big1 {
+    top: 155px;
+    left: -12px;
+  }
+  .big2 {
+    top: 155px;
+    left: 72px;
+  }
+  .big3 {
+    top: 155px;
+    left: 155px;
+  }
+  .big4 {
+    top: 155px;
+    left: 242px;
+  }
+  .big5 {
+    top: 155px;
+    left: 325px;
+  }
 }
-.ruleBox button{
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid white;
-  background: transparent;
-}
-.ruleBox button:hover{
-  background-color: white;
-}
+
 @media (max-width: 375px) {
   h2 {
     font-size: 20px;
     margin-bottom: 14px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
-  .board{
-    width: 100%;
-    height: 100%;
-    max-width: 300px;
-    max-height: 300px;
+
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+
+  .col {
+    height: 75px;
+  }
+  /* Diagonal 1 (Top-left to Bottom-right) */
+  .line-diagonal1 {
+    width: 2px;
+    height: 420px;
+    background: white;
+    transform: rotate(45deg);
+    top: -58px;
+    left: 49%;
+  }
+
+  /* Diagonal 2 (Top-right to Bottom-left) */
+  .line-diagonal2 {
+    width: 2px;
+    height: 420px;
+    background: white;
+    transform: rotate(-45deg);
+    top: -62px;
+    left: 49%;
+  }
+
+  /* Line from 3rd point of 1st row to 1st point of 3rd row */
+  .line1 {
+    position: absolute;
+    top: 72px;
+    left: 39%;
+    width: 213px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(45deg);
+  }
+
+  /* Line from 3rd point of 1st row to last point of 3rd row */
+  .line2 {
+    position: absolute;
+    top: 72px;
+    left: -10%;
+    width: 213px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+  }
+
+  /* Line from 1st & last points of 3rd row to 3rd point of last row */
+  .line3 {
+    position: absolute;
+    bottom: 70px;
+    left: -10%;
+    width: 213px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(45deg);
+  }
+
+  .line4 {
+    position: absolute;
+    bottom: 70px;
+    left: 39%;
+    width: 213px;
+    height: 2px;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+  }
+
+  /* Adjust all positions */
+  .position1 {
+    left: 71px;
+  }
+  .position2 {
+    left: 145px;
+  }
+  .position3 {
+    left: 220px;
+  }
+  .position4 {
+    left: 294px;
+  }
+  .position5 {
+    top: 71px;
+  }
+  .position6 {
+    top: 71px;
+    left: 71px;
+  }
+  .position7 {
+    top: 71px;
+    left: 145px;
+  }
+  .position8 {
+    top: 71px;
+    left: 220px;
+  }
+  .position9 {
+    top: 71px;
+    left: 294px;
+  }
+  .position10 {
+    top: 146px;
+  }
+  .position11 {
+    top: 146px;
+    left: 71px;
+  }
+  .position12 {
+    top: 146px;
+    left: 145px;
+  }
+  .position13 {
+    top: 146px;
+    left: 220px;
+  }
+  .position14 {
+    top: 146px;
+    left: 294px;
+  }
+  .position15 {
+    top: 221px;
+  }
+  .position16 {
+    top: 221px;
+    left: 71px;
+  }
+  .position17 {
+    top: 221px;
+    left: 145px;
+  }
+  .position18 {
+    top: 221px;
+    left: 220px;
+  }
+  .position19 {
+    top: 221px;
+    left: 294px;
+  }
+  .position20 {
+    top: 296px;
+  }
+  .position21 {
+    top: 296px;
+    left: 71px;
+  }
+  .position22 {
+    top: 296px;
+    left: 145px;
+  }
+  .position23 {
+    top: 296px;
+    left: 220px;
+  }
+  .position24 {
+    top: 296px;
+    left: 294px;
+  }
+
+  /* Adjust dear positions */
+  .dear1 {
+    top: 65px;
+    left: 65px;
+  }
+  .dear2 {
+    top: 50px;
+    left: 65px;
+  }
+  .dear3 {
+    top: 80px;
+    left: 65px;
+  }
+  .dear4 {
+    top: 65px;
+    left: 80px;
+  }
+  .dear5 {
+    top: 65px;
+    left: 50px;
+  }
+
+  .dear6 {
+    top: 65px;
+    left: 215px;
+  }
+  .dear7 {
+    top: 50px;
+    left: 215px;
+  }
+  .dear8 {
+    top: 80px;
+    left: 215px;
+  }
+  .dear9 {
+    top: 65px;
+    left: 230px;
+  }
+  .dear10 {
+    top: 65px;
+    left: 200px;
+  }
+
+  .dear11 {
+    top: 215px;
+    left: 65px;
+  }
+  .dear12 {
+    top: 200px;
+    left: 65px;
+  }
+  .dear13 {
+    top: 230px;
+    left: 65px;
+  }
+  .dear14 {
+    top: 215px;
+    left: 80px;
+  }
+  .dear15 {
+    top: 215px;
+    left: 50px;
+  }
+
+  .dear16 {
+    top: 215px;
+    left: 215px;
+  }
+  .dear17 {
+    top: 200px;
+    left: 215px;
+  }
+  .dear18 {
+    top: 230px;
+    left: 215px;
+  }
+  .dear19 {
+    top: 215px;
+    left: 230px;
+  }
+  .dear20 {
+    top: 215px;
+    left: 200px;
+  }
+
+  .big1 {
+    top: 135px;
+    left: -12px;
+  }
+  .big2 {
+    top: 135px;
+    left: 62px;
+  }
+  .big3 {
+    top: 135px;
+    left: 135px;
+  }
+  .big4 {
+    top: 135px;
+    left: 210px;
+  }
+  .big5 {
+    top: 135px;
+    left: 284px;
+  }
+
+  .announce {
+    font-size: 18px;
+    padding: 15px;
   }
 }

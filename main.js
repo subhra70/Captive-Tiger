@@ -49,23 +49,139 @@ let dearPosList = [
   6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 16, 16, 16, 16, 16, 18, 18, 18, 18, 18,
 ]; // This array keeps track of all the dears
 let tigerPosList = [10, 14];
+// top value of 2nd row
+const rowTop = parseInt(getComputedStyle(document.querySelector(".dear1")).top);
+
+// left value of 2nd column
+const rowLeft = parseInt(
+  getComputedStyle(document.querySelector(".dear1")).left
+);
 
 const dearTopPosList = [
-  -10, -10, -10, -10, -10, 90, 90, 90, 90, 90, 190, 190, 190, 190, 190, 290,
-  290, 290, 290, 290, 390, 390, 390, 390, 390,
+  -10,
+  -10,
+  -10,
+  -10,
+  -10,
+  rowTop,
+  rowTop,
+  rowTop,
+  rowTop,
+  rowTop,
+  rowTop + (rowTop + 10),
+  rowTop + (rowTop + 10),
+  rowTop + (rowTop + 10),
+  rowTop + (rowTop + 10),
+  rowTop + (rowTop + 10),
+  rowTop + 2 * (rowTop + 10),
+  rowTop + 2 * (rowTop + 10),
+  rowTop + 2 * (rowTop + 10),
+  rowTop + 2 * (rowTop + 10),
+  rowTop + 2 * (rowTop + 10),
+  rowTop + 3 * (rowTop + 10),
+  rowTop + 3 * (rowTop + 10),
+  rowTop + 3 * (rowTop + 10),
+  rowTop + 3 * (rowTop + 10),
+  rowTop + 3 * (rowTop + 10),
 ]; // This array keeps track of the top distance in pixel of dears
 const dearLeftPosList = [
-  -10, 90, 190, 290, 390, -10, 90, 190, 290, 390, -10, 90, 190, 290, 390, -10,
-  90, 190, 290, 390, -10, 90, 190, 290, 390,
+  -10,
+  rowLeft,
+  rowLeft + (rowLeft + 10),
+  rowLeft + 2 * (rowLeft + 10),
+  rowLeft + 3 * (rowLeft + 10),
+  -10,
+  rowLeft,
+  rowLeft + (rowLeft + 10),
+  rowLeft + 2 * (rowLeft + 10),
+  rowLeft + 3 * (rowLeft + 10),
+  -10,
+  rowLeft,
+  rowLeft + (rowLeft + 10),
+  rowLeft + 2 * (rowLeft + 10),
+  rowLeft + 3 * (rowLeft + 10),
+  -10,
+  rowLeft,
+  rowLeft + (rowLeft + 10),
+  rowLeft + 2 * (rowLeft + 10),
+  rowLeft + 3 * (rowLeft + 10),
+  -10,
+  rowLeft,
+  rowLeft + (rowLeft + 10),
+  rowLeft + 2 * (rowLeft + 10),
+  rowLeft + 3 * (rowLeft + 10),
 ]; // This array keeps track of the left distance in pixel of dears
 
+
+const tigerLeft1 = parseInt(
+  getComputedStyle(document.querySelector(".big1")).left
+);
+const tigerLeft2 = parseInt(
+  getComputedStyle(document.querySelector(".big2")).left
+);
+const tigerLeft3 = parseInt(
+  getComputedStyle(document.querySelector(".big3")).left
+);
+const tigerLeft4 = parseInt(
+  getComputedStyle(document.querySelector(".big4")).left
+);
+const tigerLeft5 = parseInt(
+  getComputedStyle(document.querySelector(".big5")).left
+);
+
 const tigerTopPosList = [
-  -15, -15, -15, -15, -15, 85, 85, 85, 85, 85, 185, 185, 185, 185, 185, 285,
-  285, 285, 285, 285, 385, 385, 385, 385, 385,
+  tigerLeft1,
+  tigerLeft1,
+  tigerLeft1,
+  tigerLeft1,
+  tigerLeft1,
+  tigerLeft2,
+  tigerLeft2,
+  tigerLeft2,
+  tigerLeft2,
+  tigerLeft2,
+  tigerLeft3,
+  tigerLeft3,
+  tigerLeft3,
+  tigerLeft3,
+  tigerLeft3,
+  tigerLeft4,
+  tigerLeft4,
+  tigerLeft4,
+  tigerLeft4,
+  tigerLeft4,
+  tigerLeft5,
+  tigerLeft5,
+  tigerLeft5,
+  tigerLeft5,
+  tigerLeft5,
 ]; // This array keeps track of the top distance in pixel of tigers
 const tigerLeftPosList = [
-  -15, 85, 185, 285, 385, -15, 85, 185, 285, 385, -15, 85, 185, 285, 385, -15,
-  85, 185, 285, 385, -15, 85, 185, 285, 385,
+  tigerLeft1,
+  tigerLeft2,
+  tigerLeft3,
+  tigerLeft4,
+  tigerLeft5,
+  tigerLeft1,
+  tigerLeft2,
+  tigerLeft3,
+  tigerLeft4,
+  tigerLeft5,
+  tigerLeft1,
+  tigerLeft2,
+  tigerLeft3,
+  tigerLeft4,
+  tigerLeft5,
+  tigerLeft1,
+  tigerLeft2,
+  tigerLeft3,
+  tigerLeft4,
+  tigerLeft5,
+  tigerLeft1,
+  tigerLeft2,
+  tigerLeft3,
+  tigerLeft4,
+  tigerLeft5,
 ]; // This array keeps track of the left distance in pixel of tigers
 
 start.addEventListener("click", () => {
