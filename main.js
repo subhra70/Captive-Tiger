@@ -517,7 +517,7 @@ function posHandling(event) {
           }
         });
         if (dearCount < 6) {
-          document.querySelector(".announce").innerHTML = "Player1 is Winner";
+          document.querySelector(".announce").innerHTML = "Player 2 is Winner";
           document.querySelector(".announce").style.backgroundColor =
             "rgb(14, 252, 14)";
           begin = 0; // when one win the game, the game will stopped immediately
@@ -1211,7 +1211,7 @@ function CapturedCheck() {
   if (flag1 === 1 && flag2 === 1) {
     document.querySelector(".announce").style.backgroundColor =
       "rgb(14, 252, 14)";
-    document.querySelector(".announce").innerHTML = "Player 2 is Winner";
+    document.querySelector(".announce").innerHTML = "Player 1 is Winner";
     ("gold");
     begin = 0;
   }
