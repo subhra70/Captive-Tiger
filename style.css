@@ -59,6 +59,31 @@ h2 {
   background: rgba(255, 255, 255, 0.4);
 }
 
+/* Rule Box Styling */
+.ruleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 10px;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid wheat;
+  color: wheat;
+  border-radius: 10px;
+  font-size: 24px;
+}
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+}
+button:hover {
+  background-color: white;
+}
+
 /* Connecting Lines */
 .line {
   position: absolute;
@@ -469,6 +494,14 @@ button:hover {
   .col {
     height: 85px;
   }
+  
+   /* Rule Box Style */
+  .ruleBox {
+    gap: 5px;
+    padding: 15px;
+    margin: 0 5px;
+    font-size: 14px;
+  }
 
   /* Diagonal 1 (Top-left to Bottom-right) */
   .line-diagonal1 {
@@ -752,6 +785,7 @@ button:hover {
   .col {
     height: 75px;
   }
+
   /* Diagonal 1 (Top-left to Bottom-right) */
   .line-diagonal1 {
     width: 2px;
